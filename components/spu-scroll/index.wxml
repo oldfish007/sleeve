@@ -1,0 +1,22 @@
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
+<wxs src="../../wxs/price.wxs" module="p" ></wxs>
+<view class="container l-class">
+        <image class="title" src="{{theme.title_img}}"></image>
+        <scroll-view   scroll-x   class="scroll-view">
+            <view class="inner">
+                 <block wx:for="{{spuList}}">
+                     <view class="spu-container">
+                     <!--图片-->
+                         <image class="spu-img" src="{{item.img}}"></image>
+                     <!--价格 autofix是否开启自动补小数位数后面的零  -->
+                         <text class="spu-text">{{item.title.length>=8?s.substring(item.title,0,7)+'...':item.title}}</text>
+                         <l-price
+                                  l-value-class="price-value"
+                                  l-unit-class="price-unit"
+                                  value="{{p.mainPrice(item.price,item.discount_price).price}}"></l-price>
+                     <!--文本-->
+                     </view>
+                 </block>
+            </view>
+        </scroll-view>
+</view>

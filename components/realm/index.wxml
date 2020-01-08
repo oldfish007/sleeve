@@ -1,0 +1,14 @@
+<view class="container">
+    <!--单品图片-->
+    <view>
+        <image></image>
+    </view>
+    <!--分到自定义组件fence里面
+    <block wx:for="{{}}">
+        <s-fence></s-fence>
+    </block>-->
+    <!--这里面使用LinUI的CountSelector组件-->
+    <view class="counter-container">
+
+    </view>
+</view>

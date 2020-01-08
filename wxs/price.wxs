@@ -1,0 +1,36 @@
+
+function mainPrice(price,discountPrice) {
+    //如果折扣价不存在
+    if(!discountPrice){
+        return {
+            price:price,
+            display:true
+        }
+    }else{
+        //如果折扣价存在，就应该是折扣价
+        return {
+            price:discountPrice,
+            display:true
+        }
+    }
+}
+
+function slashedPrice(price,discountPrice) {
+    //如果折扣价存在，划线价格就是price
+    if(discountPrice){
+        return {
+            price:price,
+            display:true
+        }
+    }else{
+        return {
+            price:null,
+            display:false
+        }
+    }
+}
+
+module.exports = {
+    mainPrice:mainPrice,
+    slashedPrice:slashedPrice
+}

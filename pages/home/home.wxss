@@ -1,0 +1,51 @@
+/*.container{
+    background-color: #000000;
+}*/
+.top-theme{
+    width: 100%;
+    height:260rpx;
+    display: flex;
+}
+/*ctrl+alt+L*/
+.swiper-img{
+    width: 100%;
+    height:260rpx;
+}
+.activity{
+    margin-top: 20rpx;
+    width: 100%;
+    height: 310rpx;
+    display: flex;
+    margin-bottom: 20rpx;
+}
+/*热卖榜单*/
+.quality{
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    width: 100%;
+    height: 880rpx;
+    display: flex
+}
+/*
+.spu-scroll{
+    margin-top: 20rpx;
+}*/
+.fashion{
+    margin-top: 20rpx;
+    width: 100%;
+    height:840rpx;
+    display: flex;
+}
+.spu-bottom{
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:30rpx;
+    background-color: #ffffff;
+}
+.title-spu-bottom{
+    width: 690rpx;
+    height: 70rpx;
+    margin-bottom: 38rpx;
+}

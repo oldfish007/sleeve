@@ -1,0 +1,42 @@
+<l-loadmore show="{{true}}"  end-text=" 没得了 "  type="{{loadingType}}" line="{{true}}">
+    <view slot="content" class="container">
+    <image class="top-theme" src="{{themeA.entrance_img}}"></image>
+    <swiper class="swiper-img"
+            indicator-dots
+    indicator-active-color="#157658"
+    autoplay
+    circular>
+        <block wx:for="{{bannerB.items}}">
+            <!-- 插槽只需要写一小段wxml代码-->
+            <swiper-item>
+                <image class="swiper-img" src="{{item.img}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--首页宫格展示 grid赋值对应自定义组件category-grid中index.js中grid-->
+    <s-category-grid grid="{{grid}}"></s-category-grid>
+    <!-- 活动 spu-list赋值对应自定义组件spu-scroll中index.js spuList
+        theme赋值对应自定义组件spu-scroll中index.js中的theme
+    -->
+    <image class="activity" src="{{activityD.entrance_img}}"></image>
+    <!-- scroll-view 做成了组件的方式 -->
+        <s-spu-scroll
+            theme="{{themeE}}"
+            spu-list="{{themeESpu}}"
+            wx:if="{{themeE.online}}"
+        ></s-spu-scroll>
+    <!--热卖榜单-->
+    <image class="quality" src="{{themeF.entrance_img}}"></image>
+    <!--把从接口获取到的数据灌入自定义组件hot-list中-->
+    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+    <image class="fashion" src="{{themeH.entrance_img}}"></image>
+    <!-- 瀑布流(为你推荐)-->
+    <view class="spu-bottom">
+        <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+        <!--注意 定义的自定义组件一定要传进来-->
+        <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+    </view>
+
+
+</view>
+</l-loadmore>
